@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">AR.Drone</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_armain">ARMain</string>
+    <color name="myColor">#FFFFFF</color>
+
+</resources>

@@ -1,0 +1,207 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myColor"
+    android:gravity="end" >
+
+    <id.r5xscn.ardrone.JoyStick
+        android:id="@+id/joyStick1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true" 
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/tDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="v"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Speed:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar1"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/textView2"
+        android:text="1"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/tLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="Left" />
+
+    <Button
+        android:id="@+id/tRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="Right" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tRight"
+        android:text="ToggleButton"
+        android:textOff="Off"
+        android:textOn="On"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/tUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="^"
+        android:textSize="35sp" />
+
+    <Button
+        android:id="@+id/tOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="toffp"
+        android:text="Takeoff" />
+
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="30dp"
+        android:layout_toLeftOf="@+id/tRight"
+        android:onClick="motions"
+        android:text="ToggleButton"
+        android:textOff="Motion Off"
+        android:textOn="Motion On" />
+
+    <Button
+        android:id="@+id/eButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="eButtonapp"
+        android:text="Emergency" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/toggleButton2"
+        android:layout_alignBottom="@+id/toggleButton2"
+        android:layout_toRightOf="@+id/eButton"
+        android:text="Battery: 0%"
+        android:textColor="#ffff00" />
+
+    <TextView
+        android:id="@+id/a1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/eButton"
+        android:text="Altitude: "
+        android:textColor="#ffff00" />
+
+    <TextView
+        android:id="@+id/p1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/a1"
+        android:layout_below="@+id/a1"
+        android:text="Pitch: "
+        android:textColor="#ffff00" />
+
+    <TextView
+        android:id="@+id/r1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/p1"
+        android:layout_below="@+id/p1"
+        android:text="Roll: "
+        android:textColor="#ffff00" />
+
+    <TextView
+        android:id="@+id/y1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/r1"
+        android:layout_below="@+id/r1"
+        android:text="Yaw: "
+        android:textColor="#ffff00" />
+    
+    <TextView
+        android:id="@+id/vx1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/y1"
+        android:layout_below="@+id/y1"
+        android:text="Velocity X: "
+        android:textColor="#ffff00" />
+    
+    <TextView
+        android:id="@+id/vy1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vx1"
+        android:layout_below="@+id/vx1"
+        android:text="Velocity Y:"
+        android:textColor="#ffff00" />
+    
+    <TextView
+        android:id="@+id/vz1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vy1"
+        android:layout_below="@+id/vy1"
+        android:text="Velocity Z:"
+        android:textColor="#ffff00" />
+    
+    <TextView
+        android:id="@+id/tm1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vz1"
+        android:layout_below="@+id/vz1"
+        android:text="Motion: Off"
+        android:textColor="#ffff00" />
+
+
+</RelativeLayout>
